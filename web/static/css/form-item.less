@@ -1,0 +1,206 @@
+.form-item {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+
+    .mover {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -14px;
+      z-index: 2;
+      cursor: move;
+
+      img {
+        width: 28px;
+      }
+    }
+
+    .item-box {
+      position: relative;
+      width: 100%;
+      padding: 20px 40px 14px;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+
+    .isFocus {
+      box-shadow: 0 4px 16px 0 rgba(192, 198, 207, .5);
+      transition: 0.2s;
+    }
+
+    .label-box {
+      position: relative;
+      top: 0;
+      left: 0px;
+      width: calc(100% + 20px);
+      display: flex;
+      align-items: flex-start;
+
+      .numIndex {
+        position: relative;
+        top: 4px;
+        left: 0;
+
+        .required {
+          position: absolute;
+          height: 8px;
+          width: 8px;
+          top: -2px;
+          left: -10px;
+          z-index: 10;
+        }
+      }
+
+      textarea {
+        width: calc(100% - 30px) !important;
+        min-height: 30px !important;
+        border: none;
+        border-bottom: 1px solid #fff;
+        color: #333;
+        font-weight: bold;
+        border-radius: 0;
+        resize: none;
+        box-shadow: none;
+
+        &:hover {
+          border-bottom-color: #e7e9eb;
+        }
+
+        &:focus {
+          border-bottom-color: #1890FF;
+        }
+      }
+    }
+
+    .qs-descrble {
+      margin-top: -6px;
+      margin-bottom: 6px;
+      box-sizing: border-box;
+    }
+
+    .qs-descrble textarea {
+      min-height: 26px !important;
+      border: none;
+      border-bottom: 1px solid #fff;
+      color: #3d4757;
+      font-size: 12px;
+      padding: 4px 2px;
+      border-radius: 0;
+      resize: none;
+      box-shadow: none;
+
+      &:hover {
+        border-bottom-color: #e7e9eb;
+      }
+
+      &:focus {
+        border-bottom-color: #1890FF;
+      }
+    }
+
+    .title-img-box {
+      display: inline-block;
+      position: relative;
+      max-width: 100%;
+      margin-bottom: 20px;
+
+      img {
+        display: block;
+        max-height: 276px;
+        max-width: 100%;
+        width: auto;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        cursor: pointer;
+      }
+
+      .delete {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 6px;
+        width: 52px;
+        height: 24px;
+        line-height: 24px;
+        color: #fff;
+        text-align: center;
+        background-color: rgba(0, 0, 0, .4);
+        cursor: pointer;
+
+        i {
+          margin-right: 2px;
+        }
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      &:hover .delete {
+        display: block;
+      }
+    }
+
+    .item-config-box {
+      float: right;
+      font-size: 12px;
+      z-index: 10;
+
+      &:first-of-type {
+        flex: 1;
+      }
+
+      .item-config {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 16px;
+        line-height: 1;
+
+        .item-type {
+          border-radius: 1px;
+          font-size: 12px;
+          color: #677182;
+          padding: 6px 8px;
+          margin-right: 16px;
+          background: rgba(25, 55, 88, .08);
+          cursor: pointer;
+
+          i {
+            margin-left: 4px;
+            font-size: 10px;
+          }
+        }
+
+        .no-type-list {
+          cursor: default;
+        }
+
+        .require-box {
+          display: inline-flex;
+          align-items: center;
+          margin: 0 16px;
+
+          span {
+            display: inline-block;
+            margin-right: 8px;
+          }
+        }
+
+        .delete {
+          display: inline-block;
+          margin-right: 16px;
+
+          img {
+            width: 14px;
+            height: auto;
+            cursor: pointer;
+          }
+        }
+
+        .more {
+          cursor: pointer;
+        }
+      }
+    }
+  }
